@@ -1,0 +1,3 @@
+Commercial use permission
+
+The recipient may use, modify, deploy, duplicate, and sell websites built from this generated project. Third-party packages, fonts, icons, and sample remote images remain subject to their own licenses and terms. No warranty is provided.

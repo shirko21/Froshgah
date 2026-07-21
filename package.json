@@ -1,0 +1,26 @@
+{
+  "name": "flexishop-starter",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n API,WEB -c auto \"npm run dev -w apps/api\" \"npm run dev -w apps/web\"",
+    "build": "npm run build -w apps/web",
+    "start": "npm run start -w apps/api",
+    "db:migrate": "npm run db:migrate -w apps/api",
+    "db:seed": "npm run db:seed -w apps/api",
+    "check": "npm run check -w apps/api && npm run check -w apps/web",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down",
+    "validate": "node scripts/validate-project.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
